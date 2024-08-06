@@ -15,13 +15,13 @@ func main() {
 		if err == nil {
 			break
 		} else {
-			fmt.Scanln("Invalid input, pleaseinput a number")
+			fmt.Println("Invalid input, pleaseinput a number")
 		}
 	}
 	//We iterate over the slice of integers created by our linear_sequence function for the fib value
 	linear_series = linearsequence(Userinput)
 	for _, number := range linear_series {
-		final_fib = append(final_fib, Finabocci(number))
+		final_fib = append(final_fib, adjusted_fibonacci(number))
 	}
 
 	fmt.Println("The fibonacci sequence:", final_fib)
@@ -52,4 +52,19 @@ func Finabocci(n int) int {
 	}
 	return result
 
+}
+
+func adjusted_fibonacci(n int) int {
+	var result int
+
+	if n == 0 {
+		result = 0
+	}
+	if n == 1 {
+		result = 1
+	}
+	if n > 1 {
+		result = Finabocci(n-1) + (n - 2)
+	}
+	return result
 }
