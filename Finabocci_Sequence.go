@@ -15,7 +15,7 @@ func main() {
 		if err == nil {
 			break
 		} else {
-			fmt.Println("Invalid input, pleaseinput a number")
+			fmt.Println("Invalid input")
 		}
 	}
 	//We iterate over the slice of integers created by our linear_sequence function for the fib value
