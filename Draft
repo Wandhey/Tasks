@@ -27,3 +27,13 @@ var movies []Movie
 func main() {
 	r = mux.New
 }
+
+
+
+
+type Movie struct{
+	ID string `json:"id"`
+}=========The struct tag json:"id" indicates that when this struct is 
+serialized (converted to JSON), the field(variable) will be represented by
+ the key "id".
+
